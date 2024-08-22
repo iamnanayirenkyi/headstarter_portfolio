@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: rgb(214, 240, 233);
+  background-color: #fcecee;
 }
 html {
   scroll-behavior: smooth;
@@ -15,7 +15,7 @@ img {
 
 .container {
   height: 100vh;
-  background-image: linear-gradient(95.2deg, #bbfded 26.8%, #c0e5f6 64%);
+  background-image: linear-gradient(200.2deg, #fed0d7 26.8%, #c0e5f6 64%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ nav {
   color: #000000;
   font-size: 1.2rem;
   margin-right: auto;
-  padding-left: 1rem;
+  padding-left: 2rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -47,7 +47,7 @@ ul {
 }
 
 ul li {
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
 ul li a {
@@ -80,11 +80,10 @@ ul li a:hover::after {
   display: flex;
   flex-direction: row;
   padding: 4rem;
-  position: relative;
-  background-color: #78c5e9;
+  background-color: #ecf7fc;
 }
 
-.about-page::before {
+/* .container::before {
   background-image: url("./images/Yazılım\ Nedir_\ Ne\ İşe\ Yarar_.jpeg");
   background-position: center;
   background-size: cover;
@@ -93,7 +92,7 @@ ul li a:hover::after {
   position: absolute;
   inset: 0;
   opacity: 0.1;
-}
+} */
 
 .name-description {
   color: #000000;
@@ -115,10 +114,10 @@ ul li a:hover::after {
   padding-top: 0.1rem;
 }
 
-.about {
+/* .about {
   color: white;
   padding-bottom: 1rem;
-}
+} */
 
 /* .about div {
   background: #283048;
@@ -131,7 +130,7 @@ ul li a:hover::after {
 } */
 
 button {
-  background-color: #0000;
+  background-color: #c0e5f6;
   border: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -139,13 +138,14 @@ button {
   cursor: pointer;
   color: #000000;
   transition: 0.5s;
-  box-shadow: 0 0 10px 0 rgba(108, 108, 108, 0.9);
 }
 
 button:hover {
-  background-color: #ffffff;
+  background-color: #fff7f8;
   color: #000;
+  box-shadow: 0 0 10px 0 #6c6c6ce6;
 }
+
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -154,27 +154,24 @@ button:hover {
   gap: 5rem;
   margin-bottom: 1rem;
 }
+
 .project div {
-  background: #78c5e9;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  background: #fdfdfd;
+  border: 0.2rem solid #c0e5f6;
+  padding: 2.5rem;
+  border-radius: 2.5rem 0rem 2.5rem 0rem;
   /* box-shadow: 0 0 15px 0 rgba(175, 174, 174, 0.6); */
-  color: rgb(0, 0, 0);
+  color: #000000;
   height: auto 10rem;
   width: auto 10rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
+
 h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: italic;
-}
-
-@media (min-width: 768px) {
-  .container {
-    height: 100vh;
-  }
 }
 
 .project span {
@@ -194,7 +191,7 @@ h2 {
 }
 
 p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "poppins", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
@@ -215,7 +212,7 @@ p {
 }
 
 footer {
-  background: #78c5e9;
+  background: #fed0d7;
   max-width: 100%;
   padding: 0.5rem;
   text-align: center;
@@ -240,4 +237,31 @@ footer {
 
 .socials p {
   text-align: center;
+}
+
+.name-description h2,
+.name-description p {
+  opacity: 0;
+  animation: appear 10s ease-in-out infinite;
+  animation-delay: 1000ms;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+    margin: 0 auto;
+    gap: 5rem;
+    margin-bottom: 1rem;
+  }
 }
